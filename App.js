@@ -109,11 +109,11 @@ export default class App extends Component {
             </View>
           </TouchableOpacity>}
           <TouchableOpacity onPress={() => { this.gameEngine.dispatch({type: "move-left"})} } >
-            <View style={styles.controlLeft} />
+          <Image source={Images.left} style={styles.controlLeft} resizeMode="stretch" />
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => { this.gameEngine.dispatch({type: "move-right"})} } >
-            <View style={styles.controlRight} />
+          <Image source={Images.right} style={styles.controlRight} resizeMode="stretch" />
           </TouchableOpacity>
         
       </View>
@@ -147,25 +147,25 @@ const styles = StyleSheet.create({
   },
   controlLeft: {
     position: 'absolute',
-    top: 770,
-    bottom: 820,
-    left: 90,
-    right: 140,
+    top: Constants.MAX_HEIGHT - 125,
+    bottom: Constants.MAX_HEIGHT - 75,
+    left: Constants.MAX_WIDTH / 2 - 120,
+    right: Constants.MAX_WIDTH / 2 - 70,
     width: 100,
     height: 80,
-    backgroundColor: '#00aaff',
-    opacity: 0.7,
+    //backgroundColor: '#00aaff',
+    opacity: 0.5,
   },
   controlRight: {
     position: 'absolute',
-    top: 770,
-    bottom: 820,
-    left: 230,
-    right: 140,
+    top: Constants.MAX_HEIGHT - 125,
+    bottom: Constants.MAX_HEIGHT - 75,
+    left: Constants.MAX_WIDTH / 2 + 20,
+    right: Constants.MAX_WIDTH / 2 + 70,
     width: 100,
     height: 80,
-    backgroundColor: '#00aaff',
-    opacity: 0.7,
+    //backgroundColor: '#00aaff',
+    opacity: 0.5,
   },
   fullScreen: {
     position: 'absolute',
